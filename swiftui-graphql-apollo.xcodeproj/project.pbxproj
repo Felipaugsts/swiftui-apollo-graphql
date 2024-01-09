@@ -3,20 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C55156C52B4DA495004289F6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C42B4DA495004289F6 /* UIView+Extension.swift */; };
+		C55156C82B4DAB48004289F6 /* LaunchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C72B4DAB48004289F6 /* LaunchRow.swift */; };
+		C55156CA2B4DAB7C004289F6 /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C92B4DAB7C004289F6 /* LaunchDetails.swift */; };
+		C55156D02B4DB2E4004289F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C55156D22B4DB2E4004289F6 /* Localizable.strings */; };
+		C55156D42B4DB357004289F6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156D32B4DB357004289F6 /* String+Extension.swift */; };
+		C55156D62B4DB3C6004289F6 /* LocaleKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156D52B4DB3C6004289F6 /* LocaleKeys.swift */; };
+		C5A54BBF2B4D744D00566B28 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = C5A54BBE2B4D744D00566B28 /* Apollo */; };
+		C5A54BC12B4D75DA00566B28 /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = C5A54BC02B4D75DA00566B28 /* graphql */; };
+		C5A54BCA2B4D771700566B28 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BC92B4D771700566B28 /* Network.swift */; };
+		C5A54BCF2B4D7A9B00566B28 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BCE2B4D7A9B00566B28 /* LaunchView.swift */; };
+		C5A54BD12B4D7AAA00566B28 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BD02B4D7AAA00566B28 /* LaunchViewModel.swift */; };
+		C5A54BD42B4D83DE00566B28 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C5A54BD32B4D83DE00566B28 /* SDWebImageSwiftUI */; };
+		C5A54BD62B4D848400566B28 /* RocketReserverAPI in Resources */ = {isa = PBXBuildFile; fileRef = C5A54BD52B4D848400566B28 /* RocketReserverAPI */; };
+		C5A54BD92B4D87D100566B28 /* RocketReserverAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C5A54BD82B4D87D100566B28 /* RocketReserverAPI */; };
+		C5A54BDB2B4D8BA400566B28 /* LaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BDA2B4D8BA400566B28 /* LaunchModel.swift */; };
 		C5B896072B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B896062B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift */; };
-		C5B896092B4D726C00018EA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B896082B4D726C00018EA8 /* ContentView.swift */; };
 		C5B8960B2B4D726E00018EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B8960A2B4D726E00018EA8 /* Assets.xcassets */; };
 		C5B8960E2B4D726E00018EA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B8960D2B4D726E00018EA8 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C55156C42B4DA495004289F6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C55156C72B4DAB48004289F6 /* LaunchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRow.swift; sourceTree = "<group>"; };
+		C55156C92B4DAB7C004289F6 /* LaunchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetails.swift; sourceTree = "<group>"; };
+		C55156D12B4DB2E4004289F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C55156D32B4DB357004289F6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C55156D52B4DB3C6004289F6 /* LocaleKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleKeys.swift; sourceTree = "<group>"; };
+		C5A54BC02B4D75DA00566B28 /* graphql */ = {isa = PBXFileReference; lastKnownFileType = folder; path = graphql; sourceTree = "<group>"; };
+		C5A54BC92B4D771700566B28 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C5A54BCE2B4D7A9B00566B28 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		C5A54BD02B4D7AAA00566B28 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		C5A54BD52B4D848400566B28 /* RocketReserverAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RocketReserverAPI; sourceTree = "<group>"; };
+		C5A54BDA2B4D8BA400566B28 /* LaunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModel.swift; sourceTree = "<group>"; };
 		C5B896032B4D726C00018EA8 /* swiftui-graphql-apollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-graphql-apollo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B896062B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_graphql_apolloApp.swift; sourceTree = "<group>"; };
-		C5B896082B4D726C00018EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C5B8960A2B4D726E00018EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5B8960D2B4D726E00018EA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,17 +51,94 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A54BD92B4D87D100566B28 /* RocketReserverAPI in Frameworks */,
+				C5A54BD42B4D83DE00566B28 /* SDWebImageSwiftUI in Frameworks */,
+				C5A54BBF2B4D744D00566B28 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C55156C62B4DAB3B004289F6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C55156C72B4DAB48004289F6 /* LaunchRow.swift */,
+				C55156C92B4DAB7C004289F6 /* LaunchDetails.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C55156CB2B4DB066004289F6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C55156C42B4DA495004289F6 /* UIView+Extension.swift */,
+				C55156D32B4DB357004289F6 /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C55156CC2B4DB076004289F6 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				C55156CD2B4DB2BD004289F6 /* Resources */,
+				C5B896062B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift */,
+				C5B8960A2B4D726E00018EA8 /* Assets.xcassets */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		C55156CD2B4DB2BD004289F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C55156D22B4DB2E4004289F6 /* Localizable.strings */,
+				C55156D52B4DB3C6004289F6 /* LocaleKeys.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5A54BC72B4D76B200566B28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5A54BC82B4D770D00566B28 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C5A54BC92B4D771700566B28 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C5A54BCB2B4D7A6500566B28 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C5A54BCD2B4D7A8600566B28 /* LaunchList */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		C5A54BCD2B4D7A8600566B28 /* LaunchList */ = {
+			isa = PBXGroup;
+			children = (
+				C5A54BCE2B4D7A9B00566B28 /* LaunchView.swift */,
+				C5A54BD02B4D7AAA00566B28 /* LaunchViewModel.swift */,
+				C5A54BDA2B4D8BA400566B28 /* LaunchModel.swift */,
+			);
+			path = LaunchList;
+			sourceTree = "<group>";
+		};
 		C5B895FA2B4D726C00018EA8 = {
 			isa = PBXGroup;
 			children = (
+				C5A54BD52B4D848400566B28 /* RocketReserverAPI */,
+				C5A54BC82B4D770D00566B28 /* Network */,
+				C5A54BC02B4D75DA00566B28 /* graphql */,
 				C5B896052B4D726C00018EA8 /* swiftui-graphql-apollo */,
 				C5B896042B4D726C00018EA8 /* Products */,
+				C5A54BC72B4D76B200566B28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +153,11 @@
 		C5B896052B4D726C00018EA8 /* swiftui-graphql-apollo */ = {
 			isa = PBXGroup;
 			children = (
-				C5B896062B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift */,
-				C5B896082B4D726C00018EA8 /* ContentView.swift */,
-				C5B8960A2B4D726E00018EA8 /* Assets.xcassets */,
+				C55156C62B4DAB3B004289F6 /* Components */,
+				C55156CC2B4DB076004289F6 /* Infrastructure */,
+				C5A54BCB2B4D7A6500566B28 /* Scene */,
 				C5B8960C2B4D726E00018EA8 /* Preview Content */,
+				C55156CB2B4DB066004289F6 /* Extension */,
 			);
 			path = "swiftui-graphql-apollo";
 			sourceTree = "<group>";
@@ -83,6 +186,11 @@
 			dependencies = (
 			);
 			name = "swiftui-graphql-apollo";
+			packageProductDependencies = (
+				C5A54BBE2B4D744D00566B28 /* Apollo */,
+				C5A54BD32B4D83DE00566B28 /* SDWebImageSwiftUI */,
+				C5A54BD82B4D87D100566B28 /* RocketReserverAPI */,
+			);
 			productName = "swiftui-graphql-apollo";
 			productReference = C5B896032B4D726C00018EA8 /* swiftui-graphql-apollo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +219,11 @@
 				Base,
 			);
 			mainGroup = C5B895FA2B4D726C00018EA8;
+			packageReferences = (
+				C5A54BBD2B4D744D00566B28 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				C5A54BD22B4D83DE00566B28 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				C5A54BD72B4D87D100566B28 /* XCLocalSwiftPackageReference "RocketReserverAPI" */,
+			);
 			productRefGroup = C5B896042B4D726C00018EA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55156D02B4DB2E4004289F6 /* Localizable.strings in Resources */,
+				C5A54BC12B4D75DA00566B28 /* graphql in Resources */,
+				C5A54BD62B4D848400566B28 /* RocketReserverAPI in Resources */,
 				C5B8960E2B4D726E00018EA8 /* Preview Assets.xcassets in Resources */,
 				C5B8960B2B4D726E00018EA8 /* Assets.xcassets in Resources */,
 			);
@@ -137,12 +253,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B896092B4D726C00018EA8 /* ContentView.swift in Sources */,
+				C55156C52B4DA495004289F6 /* UIView+Extension.swift in Sources */,
+				C55156D42B4DB357004289F6 /* String+Extension.swift in Sources */,
+				C5A54BCF2B4D7A9B00566B28 /* LaunchView.swift in Sources */,
 				C5B896072B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift in Sources */,
+				C5A54BD12B4D7AAA00566B28 /* LaunchViewModel.swift in Sources */,
+				C5A54BCA2B4D771700566B28 /* Network.swift in Sources */,
+				C55156C82B4DAB48004289F6 /* LaunchRow.swift in Sources */,
+				C5A54BDB2B4D8BA400566B28 /* LaunchModel.swift in Sources */,
+				C55156CA2B4DAB7C004289F6 /* LaunchDetails.swift in Sources */,
+				C55156D62B4DB3C6004289F6 /* LocaleKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C55156D22B4DB2E4004289F6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C55156D12B4DB2E4004289F6 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C5B8960F2B4D726E00018EA8 /* Debug */ = {
@@ -197,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -344,6 +479,49 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C5A54BD72B4D87D100566B28 /* XCLocalSwiftPackageReference "RocketReserverAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RocketReserverAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C5A54BBD2B4D744D00566B28 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
+		C5A54BD22B4D83DE00566B28 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C5A54BBE2B4D744D00566B28 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5A54BBD2B4D744D00566B28 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		C5A54BD32B4D83DE00566B28 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5A54BD22B4D83DE00566B28 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		C5A54BD82B4D87D100566B28 /* RocketReserverAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RocketReserverAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C5B895FB2B4D726C00018EA8 /* Project object */;
 }

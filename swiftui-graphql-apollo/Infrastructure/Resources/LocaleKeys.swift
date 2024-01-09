@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+enum LocaleKeys: String {
+    case title = "titleView"
+    case skeletonComponent = "skeletonComponent"
+}
+
+extension LocaleKeys {
+    var localized: String {
+        return self.rawValue.localized()
+    }
+}

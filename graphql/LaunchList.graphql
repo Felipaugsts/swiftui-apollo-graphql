@@ -1,8 +1,14 @@
-//
-//  LaunchList.graphql.swift
-//  swiftui-graphql-apollo
-//
-//  Created by Felipe Augusto Silva on 09/01/24.
-//
-
-import Foundation
+query LaunchList {
+  launches {
+    hasMore
+    cursor
+    launches {
+      id
+      site
+      mission {
+        name
+        missionPatch(size: SMALL)
+      }
+    }
+  }
+}
