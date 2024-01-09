@@ -134,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				C5A54BD52B4D848400566B28 /* RocketReserverAPI */,
-				C5A54BC82B4D770D00566B28 /* Network */,
 				C5A54BC02B4D75DA00566B28 /* graphql */,
 				C5B896052B4D726C00018EA8 /* swiftui-graphql-apollo */,
 				C5B896042B4D726C00018EA8 /* Products */,
@@ -153,6 +152,7 @@
 		C5B896052B4D726C00018EA8 /* swiftui-graphql-apollo */ = {
 			isa = PBXGroup;
 			children = (
+				C5A54BC82B4D770D00566B28 /* Network */,
 				C55156C62B4DAB3B004289F6 /* Components */,
 				C55156CC2B4DB076004289F6 /* Infrastructure */,
 				C5A54BCB2B4D7A6500566B28 /* Scene */,
