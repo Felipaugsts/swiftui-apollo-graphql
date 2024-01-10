@@ -6,21 +6,22 @@
 //
 
 import SwiftUI
-import RocketReserverAPI
 
 struct CharacterView: View {
     @ObservedObject var viewModel = CharacterViewModel()
-    @Namespace var animation
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             content()
                 .onAppear {
                     viewModel.fetchCharacters()
                 }
-                .navigationDestination(for: CharactersListModel.self) { character in
-                    DetailsView(item: character)
-                }
+                .navigationTitle("Characters")
+                .navigationBarItems(trailing: {
+                    Toggle(LocaleKeys.skeletonComponent.localized,
+                           isOn: $viewModel.loading)
+                        .padding()
+                }())
         }
     }
     
@@ -29,32 +30,33 @@ struct CharacterView: View {
     @ViewBuilder
     private func content() -> some View {
         VStack {
-            Toggle(LocaleKeys.skeletonComponent.localized,
-                   isOn: $viewModel.loading)
-            .padding()
-            
             charactersList()
+            Spacer()
         }
     }
     
     // MARK: - List
     
     private func charactersList() -> some View {
-        ScrollView {
-            LazyVStack(spacing: 4) {
-                ForEach(viewModel.charactersList, id: \.id) { character in
-                    NavigationLink(value: character, label: {
-                        ItemRow(item: character,
-                                loading: $viewModel.loading)
-                        .shimmering($viewModel.loading)
-                    })
+        VStack {
+            Text("Character")
+                .shimmering($viewModel.loading)
+            
+            List {
+                ForEach(viewModel.filteredFruits, id: \.id) { character in
+                    NavigationLink(destination: CharacterDetailView(item: character)) {
+                        ItemRow(item: character, loading: $viewModel.loading)
+                            .shimmering($viewModel.loading)
+                    }
                     .disabled(viewModel.loading)
                 }
             }
+            .listStyle(.grouped)
+            .searchable(text: $viewModel.searchText, prompt: "Search")
         }
     }
-    
 }
+
 
 #Preview {
     CharacterView()

@@ -3,14 +3,20 @@
 
 @_exported import ApolloAPI
 
-public class CharactersListQuery: GraphQLQuery {
-  public static let operationName: String = "CharactersList"
+public class PlanetsQuery: GraphQLQuery {
+  public static let operationName: String = "Planets"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query CharactersList { characters { __typename results { __typename id name status species image location { __typename id } } } }"#
+      #"query Planets($id: ID!) { location(id: $id) { __typename id name dimension residents { __typename id name status species image } } }"#
     ))
 
-  public init() {}
+  public var id: ID
+
+  public init(id: ID) {
+    self.id = id
+  }
+
+  public var __variables: Variables? { ["id": id] }
 
   public struct Data: CharactersAPI.SelectionSet {
     public let __data: DataDict
@@ -18,31 +24,41 @@ public class CharactersListQuery: GraphQLQuery {
 
     public static var __parentType: ApolloAPI.ParentType { CharactersAPI.Objects.Query }
     public static var __selections: [ApolloAPI.Selection] { [
-      .field("characters", Characters?.self),
+      .field("location", Location?.self, arguments: ["id": .variable("id")]),
     ] }
 
-    /// Get the list of all characters
-    public var characters: Characters? { __data["characters"] }
+    /// Get a specific locations by ID
+    public var location: Location? { __data["location"] }
 
-    /// Characters
+    /// Location
     ///
-    /// Parent Type: `Characters`
-    public struct Characters: CharactersAPI.SelectionSet {
+    /// Parent Type: `Location`
+    public struct Location: CharactersAPI.SelectionSet {
       public let __data: DataDict
       public init(_dataDict: DataDict) { __data = _dataDict }
 
-      public static var __parentType: ApolloAPI.ParentType { CharactersAPI.Objects.Characters }
+      public static var __parentType: ApolloAPI.ParentType { CharactersAPI.Objects.Location }
       public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
-        .field("results", [Result?]?.self),
+        .field("id", CharactersAPI.ID?.self),
+        .field("name", String?.self),
+        .field("dimension", String?.self),
+        .field("residents", [Resident?].self),
       ] }
 
-      public var results: [Result?]? { __data["results"] }
+      /// The id of the location.
+      public var id: CharactersAPI.ID? { __data["id"] }
+      /// The name of the location.
+      public var name: String? { __data["name"] }
+      /// The dimension in which the location is located.
+      public var dimension: String? { __data["dimension"] }
+      /// List of characters who have been last seen in the location.
+      public var residents: [Resident?] { __data["residents"] }
 
-      /// Characters.Result
+      /// Location.Resident
       ///
       /// Parent Type: `Character`
-      public struct Result: CharactersAPI.SelectionSet {
+      public struct Resident: CharactersAPI.SelectionSet {
         public let __data: DataDict
         public init(_dataDict: DataDict) { __data = _dataDict }
 
@@ -54,7 +70,6 @@ public class CharactersListQuery: GraphQLQuery {
           .field("status", String?.self),
           .field("species", String?.self),
           .field("image", String?.self),
-          .field("location", Location?.self),
         ] }
 
         /// The id of the character.
@@ -68,25 +83,6 @@ public class CharactersListQuery: GraphQLQuery {
         /// Link to the character's image.
         /// All images are 300x300px and most are medium shots or portraits since they are intended to be used as avatars.
         public var image: String? { __data["image"] }
-        /// The character's last known location
-        public var location: Location? { __data["location"] }
-
-        /// Characters.Result.Location
-        ///
-        /// Parent Type: `Location`
-        public struct Location: CharactersAPI.SelectionSet {
-          public let __data: DataDict
-          public init(_dataDict: DataDict) { __data = _dataDict }
-
-          public static var __parentType: ApolloAPI.ParentType { CharactersAPI.Objects.Location }
-          public static var __selections: [ApolloAPI.Selection] { [
-            .field("__typename", String.self),
-            .field("id", CharactersAPI.ID?.self),
-          ] }
-
-          /// The id of the location.
-          public var id: CharactersAPI.ID? { __data["id"] }
-        }
       }
     }
   }

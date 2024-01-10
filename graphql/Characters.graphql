@@ -6,6 +6,36 @@ query CharactersList {
       status
       species
       image
+      location {
+        id
+      }
     }
   }
 }
+
+query Planets($id: ID!) {
+  location(id: $id) {
+    id
+    name
+    dimension
+    residents {
+      id
+      name
+      status
+      species
+      image
+    }
+  }
+}
+
+query CharactersByFilter($name: String!) {
+  characters(filter: { name: $name }) {
+    results {
+      episode {
+        id
+        name
+      }
+    }
+  }
+}
+

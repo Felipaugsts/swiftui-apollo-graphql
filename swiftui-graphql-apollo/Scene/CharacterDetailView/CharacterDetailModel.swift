@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct Location {
+    var id: String
+    var name: String
+    var dimension: String
+    var residents: [CharactersListModel]
+}
+
+struct Episode {
+    var id: String
+    var name: String
+}

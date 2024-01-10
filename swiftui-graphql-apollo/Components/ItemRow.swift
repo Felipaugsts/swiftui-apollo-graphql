@@ -51,11 +51,9 @@ struct ItemRow: View {
             Spacer()
         }
         .frame(height: 100)
-        .padding(4)
-        .background(Color.gray.opacity(0.04))
     }
 }
 
 #Preview {
-    ItemRow(item: CharactersListModel(id: "1", name: "Rick", status: "dead", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/218.jpeg"), loading: .constant(true))
+    ItemRow(item: CharactersListModel(id: "1", name: "Rick", status: "dead", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/218.jpeg", location: ""), loading: .constant(true))
 }

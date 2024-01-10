@@ -12,7 +12,12 @@ import CharactersAPI
 class CharacterViewModel: ObservableObject {
     @Published var charactersList = [CharactersListModel]()
     @Published var loading: Bool = false
-    @Published var filter: String = ""
+    @Published var searchText: String = ""
+    var filteredFruits: [CharactersListModel] {
+        charactersList.filter {
+            searchText.isEmpty || $0.name.localizedCaseInsensitiveContains(searchText)
+        }
+    }
     
     private let service: NetworkService
     
@@ -51,7 +56,7 @@ class CharacterViewModel: ObservableObject {
     
     private func displayLoaderPlaceholders() {
         let loaderPlaceholders: [CharactersListModel] = (0..<6).map { index in
-            CharactersListModel(id: String(index), name: nil, status: nil, species: nil, image: nil)
+            CharactersListModel(id: String(index), name: "", status: nil, species: nil, image: nil, location: nil)
         }
         charactersList = loaderPlaceholders
     }
@@ -59,13 +64,15 @@ class CharacterViewModel: ObservableObject {
     private func populateCharacterList(_ characters: [CharactersListQuery.Data.Characters.Result?]) {
         let items: [CharactersListModel] = characters.compactMap { index in
             return CharactersListModel(id: index?.id ?? "",
-                                       name: index?.name,
+                                       name: index?.name ?? "",
                                        status: index?.status,
                                        species: index?.species,
-                                       image: index?.image)
+                                       image: index?.image, 
+                                       location: index?.location?.id)
         }
         
         charactersList = items
         loading = false
     }
+    
 }

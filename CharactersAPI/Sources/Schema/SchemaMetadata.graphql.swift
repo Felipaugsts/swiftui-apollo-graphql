@@ -25,6 +25,8 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     case "Query": return CharactersAPI.Objects.Query
     case "Characters": return CharactersAPI.Objects.Characters
     case "Character": return CharactersAPI.Objects.Character
+    case "Location": return CharactersAPI.Objects.Location
+    case "Episode": return CharactersAPI.Objects.Episode
     default: return nil
     }
   }
