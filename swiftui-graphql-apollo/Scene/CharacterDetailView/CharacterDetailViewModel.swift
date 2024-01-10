@@ -16,6 +16,9 @@ class CharacterDetailViewModel: ObservableObject {
     @Published var episodeExpended: Bool = false
     @Published var episodes: [Episode] = []
     
+    @Published var loadingPlanets: Bool = false
+    @Published var loadingEpisodes: Bool = false
+    
     private let service: NetworkService
     
     // MARK: - Initializer
@@ -25,6 +28,8 @@ class CharacterDetailViewModel: ObservableObject {
     }
     
     public func fetchPlanet(id: String) {
+        loadingPlanets = true
+        
         service.fetchLocation(id) { result in
             switch result {
             case .success(let resp):
@@ -33,6 +38,7 @@ class CharacterDetailViewModel: ObservableObject {
                                             name: response.name ?? "",
                                             dimension: response.dimension ?? "",
                                             residents: self.fetchResidents(response))
+                    self.loadingPlanets = false
                 }
             case .failure(let failure):
                 print(failure)
@@ -41,6 +47,8 @@ class CharacterDetailViewModel: ObservableObject {
     }
     
     public func fetchEpisodes(name: String) {
+        loadingEpisodes = true
+        
         service.fetchEpisodeBy(name) { results in
             switch results {
             case .success(let resp):
@@ -51,6 +59,7 @@ class CharacterDetailViewModel: ObservableObject {
                         })
                     }
                 }
+                self.loadingEpisodes = false
                 break
             case .failure(let failure):
                 break

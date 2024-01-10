@@ -81,6 +81,7 @@ struct CharacterDetailView: View {
                 Text("No residents found")
             }
         }
+        .shimmering($viewModel.loadingPlanets)
     }
     
     private func episodesDisclosureGroup() -> some View {
@@ -89,6 +90,7 @@ struct CharacterDetailView: View {
                 Text(episode.name)
             }
         }
+        .shimmering($viewModel.loadingEpisodes)
     }
 }
 

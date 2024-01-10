@@ -1,2 +1,3 @@
 "titleView" = "Characters";
 "skeletonComponent" = "Skeleton";
+"textfieldPlaceholder" = "Search";

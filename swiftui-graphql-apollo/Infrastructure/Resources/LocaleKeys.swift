@@ -10,6 +10,7 @@ import Foundation
 enum LocaleKeys: String {
     case title = "titleView"
     case skeletonComponent = "skeletonComponent"
+    case textfieldPlaceholder = "textfieldPlaceholder"
 }
 
 extension LocaleKeys {

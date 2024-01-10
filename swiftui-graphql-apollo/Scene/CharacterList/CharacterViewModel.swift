@@ -56,7 +56,7 @@ class CharacterViewModel: ObservableObject {
     
     private func displayLoaderPlaceholders() {
         let loaderPlaceholders: [CharactersListModel] = (0..<6).map { index in
-            CharactersListModel(id: String(index), name: "", status: nil, species: nil, image: nil, location: nil)
+            CharactersListModel(id: String(index), name: "loading", status: "loading", species: "loading", image: "loading", location: "loading")
         }
         charactersList = loaderPlaceholders
     }
