@@ -1,5 +1,5 @@
 {
-  "schemaNamespace" : "RocketReserverAPI",
+  "schemaNamespace" : "CharactersAPI",
   "input" : {
     "operationSearchPaths" : [
       "**/*.graphql"
@@ -14,7 +14,7 @@
       }
     },
     "schemaTypes" : {
-      "path" : "./RocketReserverAPI",
+      "path" : "./CharactersAPI",
       "moduleType" : {
         "swiftPackageManager" : {
         }
@@ -28,7 +28,7 @@
   "schemaDownloadConfiguration": {
       "downloadMethod": {
           "introspection": {
-              "endpointURL": "https://apollo-fullstack-tutorial.herokuapp.com/graphql",
+              "endpointURL": "https://rickandmortyapi.com/graphql",
               "httpMethod": {
                   "POST": {}
               },

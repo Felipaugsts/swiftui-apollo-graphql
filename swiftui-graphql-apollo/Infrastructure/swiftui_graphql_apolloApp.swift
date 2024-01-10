@@ -11,7 +11,7 @@ import SwiftUI
 struct swiftui_graphql_apolloApp: App {
     var body: some Scene {
         WindowGroup {
-                LaunchView()
+                CharacterView()
         }
     }
 }

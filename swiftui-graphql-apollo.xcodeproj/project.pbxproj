@@ -8,20 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		C55156C52B4DA495004289F6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C42B4DA495004289F6 /* UIView+Extension.swift */; };
-		C55156C82B4DAB48004289F6 /* LaunchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C72B4DAB48004289F6 /* LaunchRow.swift */; };
-		C55156CA2B4DAB7C004289F6 /* LaunchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C92B4DAB7C004289F6 /* LaunchDetails.swift */; };
+		C55156C82B4DAB48004289F6 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C72B4DAB48004289F6 /* ItemRow.swift */; };
+		C55156CA2B4DAB7C004289F6 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C92B4DAB7C004289F6 /* DetailsView.swift */; };
 		C55156D02B4DB2E4004289F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C55156D22B4DB2E4004289F6 /* Localizable.strings */; };
 		C55156D42B4DB357004289F6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156D32B4DB357004289F6 /* String+Extension.swift */; };
 		C55156D62B4DB3C6004289F6 /* LocaleKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156D52B4DB3C6004289F6 /* LocaleKeys.swift */; };
+		C55156D82B4DE082004289F6 /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = C55156D72B4DE082004289F6 /* graphql */; };
+		C55156DA2B4DE207004289F6 /* CharactersAPI in Resources */ = {isa = PBXBuildFile; fileRef = C55156D92B4DE207004289F6 /* CharactersAPI */; };
+		C55156DD2B4DE219004289F6 /* CharactersAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C55156DC2B4DE219004289F6 /* CharactersAPI */; };
 		C5A54BBF2B4D744D00566B28 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = C5A54BBE2B4D744D00566B28 /* Apollo */; };
-		C5A54BC12B4D75DA00566B28 /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = C5A54BC02B4D75DA00566B28 /* graphql */; };
 		C5A54BCA2B4D771700566B28 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BC92B4D771700566B28 /* Network.swift */; };
-		C5A54BCF2B4D7A9B00566B28 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BCE2B4D7A9B00566B28 /* LaunchView.swift */; };
-		C5A54BD12B4D7AAA00566B28 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BD02B4D7AAA00566B28 /* LaunchViewModel.swift */; };
-		C5A54BD42B4D83DE00566B28 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C5A54BD32B4D83DE00566B28 /* SDWebImageSwiftUI */; };
-		C5A54BD62B4D848400566B28 /* RocketReserverAPI in Resources */ = {isa = PBXBuildFile; fileRef = C5A54BD52B4D848400566B28 /* RocketReserverAPI */; };
-		C5A54BD92B4D87D100566B28 /* RocketReserverAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C5A54BD82B4D87D100566B28 /* RocketReserverAPI */; };
-		C5A54BDB2B4D8BA400566B28 /* LaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BDA2B4D8BA400566B28 /* LaunchModel.swift */; };
+		C5A54BCF2B4D7A9B00566B28 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BCE2B4D7A9B00566B28 /* CharacterView.swift */; };
+		C5A54BD12B4D7AAA00566B28 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BD02B4D7AAA00566B28 /* CharacterViewModel.swift */; };
+		C5A54BDB2B4D8BA400566B28 /* CharactersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BDA2B4D8BA400566B28 /* CharactersListModel.swift */; };
 		C5B896072B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B896062B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift */; };
 		C5B8960B2B4D726E00018EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B8960A2B4D726E00018EA8 /* Assets.xcassets */; };
 		C5B8960E2B4D726E00018EA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B8960D2B4D726E00018EA8 /* Preview Assets.xcassets */; };
@@ -29,17 +28,17 @@
 
 /* Begin PBXFileReference section */
 		C55156C42B4DA495004289F6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		C55156C72B4DAB48004289F6 /* LaunchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRow.swift; sourceTree = "<group>"; };
-		C55156C92B4DAB7C004289F6 /* LaunchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetails.swift; sourceTree = "<group>"; };
+		C55156C72B4DAB48004289F6 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		C55156C92B4DAB7C004289F6 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		C55156D12B4DB2E4004289F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C55156D32B4DB357004289F6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C55156D52B4DB3C6004289F6 /* LocaleKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleKeys.swift; sourceTree = "<group>"; };
-		C5A54BC02B4D75DA00566B28 /* graphql */ = {isa = PBXFileReference; lastKnownFileType = folder; path = graphql; sourceTree = "<group>"; };
+		C55156D72B4DE082004289F6 /* graphql */ = {isa = PBXFileReference; lastKnownFileType = folder; path = graphql; sourceTree = "<group>"; };
+		C55156D92B4DE207004289F6 /* CharactersAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CharactersAPI; sourceTree = "<group>"; };
 		C5A54BC92B4D771700566B28 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		C5A54BCE2B4D7A9B00566B28 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
-		C5A54BD02B4D7AAA00566B28 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
-		C5A54BD52B4D848400566B28 /* RocketReserverAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RocketReserverAPI; sourceTree = "<group>"; };
-		C5A54BDA2B4D8BA400566B28 /* LaunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModel.swift; sourceTree = "<group>"; };
+		C5A54BCE2B4D7A9B00566B28 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		C5A54BD02B4D7AAA00566B28 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		C5A54BDA2B4D8BA400566B28 /* CharactersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListModel.swift; sourceTree = "<group>"; };
 		C5B896032B4D726C00018EA8 /* swiftui-graphql-apollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-graphql-apollo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B896062B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_graphql_apolloApp.swift; sourceTree = "<group>"; };
 		C5B8960A2B4D726E00018EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,8 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A54BD92B4D87D100566B28 /* RocketReserverAPI in Frameworks */,
-				C5A54BD42B4D83DE00566B28 /* SDWebImageSwiftUI in Frameworks */,
+				C55156DD2B4DE219004289F6 /* CharactersAPI in Frameworks */,
 				C5A54BBF2B4D744D00566B28 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,8 +61,8 @@
 		C55156C62B4DAB3B004289F6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C55156C72B4DAB48004289F6 /* LaunchRow.swift */,
-				C55156C92B4DAB7C004289F6 /* LaunchDetails.swift */,
+				C55156C72B4DAB48004289F6 /* ItemRow.swift */,
+				C55156C92B4DAB7C004289F6 /* DetailsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -123,9 +121,9 @@
 		C5A54BCD2B4D7A8600566B28 /* LaunchList */ = {
 			isa = PBXGroup;
 			children = (
-				C5A54BCE2B4D7A9B00566B28 /* LaunchView.swift */,
-				C5A54BD02B4D7AAA00566B28 /* LaunchViewModel.swift */,
-				C5A54BDA2B4D8BA400566B28 /* LaunchModel.swift */,
+				C5A54BCE2B4D7A9B00566B28 /* CharacterView.swift */,
+				C5A54BD02B4D7AAA00566B28 /* CharacterViewModel.swift */,
+				C5A54BDA2B4D8BA400566B28 /* CharactersListModel.swift */,
 			);
 			path = LaunchList;
 			sourceTree = "<group>";
@@ -133,8 +131,8 @@
 		C5B895FA2B4D726C00018EA8 = {
 			isa = PBXGroup;
 			children = (
-				C5A54BD52B4D848400566B28 /* RocketReserverAPI */,
-				C5A54BC02B4D75DA00566B28 /* graphql */,
+				C55156D92B4DE207004289F6 /* CharactersAPI */,
+				C55156D72B4DE082004289F6 /* graphql */,
 				C5B896052B4D726C00018EA8 /* swiftui-graphql-apollo */,
 				C5B896042B4D726C00018EA8 /* Products */,
 				C5A54BC72B4D76B200566B28 /* Frameworks */,
@@ -188,8 +186,7 @@
 			name = "swiftui-graphql-apollo";
 			packageProductDependencies = (
 				C5A54BBE2B4D744D00566B28 /* Apollo */,
-				C5A54BD32B4D83DE00566B28 /* SDWebImageSwiftUI */,
-				C5A54BD82B4D87D100566B28 /* RocketReserverAPI */,
+				C55156DC2B4DE219004289F6 /* CharactersAPI */,
 			);
 			productName = "swiftui-graphql-apollo";
 			productReference = C5B896032B4D726C00018EA8 /* swiftui-graphql-apollo.app */;
@@ -221,8 +218,7 @@
 			mainGroup = C5B895FA2B4D726C00018EA8;
 			packageReferences = (
 				C5A54BBD2B4D744D00566B28 /* XCRemoteSwiftPackageReference "apollo-ios" */,
-				C5A54BD22B4D83DE00566B28 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				C5A54BD72B4D87D100566B28 /* XCLocalSwiftPackageReference "RocketReserverAPI" */,
+				C55156DB2B4DE219004289F6 /* XCLocalSwiftPackageReference "CharactersAPI" */,
 			);
 			productRefGroup = C5B896042B4D726C00018EA8 /* Products */;
 			projectDirPath = "";
@@ -239,9 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C55156D02B4DB2E4004289F6 /* Localizable.strings in Resources */,
-				C5A54BC12B4D75DA00566B28 /* graphql in Resources */,
-				C5A54BD62B4D848400566B28 /* RocketReserverAPI in Resources */,
 				C5B8960E2B4D726E00018EA8 /* Preview Assets.xcassets in Resources */,
+				C55156DA2B4DE207004289F6 /* CharactersAPI in Resources */,
+				C55156D82B4DE082004289F6 /* graphql in Resources */,
 				C5B8960B2B4D726E00018EA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,13 +251,13 @@
 			files = (
 				C55156C52B4DA495004289F6 /* UIView+Extension.swift in Sources */,
 				C55156D42B4DB357004289F6 /* String+Extension.swift in Sources */,
-				C5A54BCF2B4D7A9B00566B28 /* LaunchView.swift in Sources */,
+				C5A54BCF2B4D7A9B00566B28 /* CharacterView.swift in Sources */,
 				C5B896072B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift in Sources */,
-				C5A54BD12B4D7AAA00566B28 /* LaunchViewModel.swift in Sources */,
+				C5A54BD12B4D7AAA00566B28 /* CharacterViewModel.swift in Sources */,
 				C5A54BCA2B4D771700566B28 /* Network.swift in Sources */,
-				C55156C82B4DAB48004289F6 /* LaunchRow.swift in Sources */,
-				C5A54BDB2B4D8BA400566B28 /* LaunchModel.swift in Sources */,
-				C55156CA2B4DAB7C004289F6 /* LaunchDetails.swift in Sources */,
+				C55156C82B4DAB48004289F6 /* ItemRow.swift in Sources */,
+				C5A54BDB2B4D8BA400566B28 /* CharactersListModel.swift in Sources */,
+				C55156CA2B4DAB7C004289F6 /* DetailsView.swift in Sources */,
 				C55156D62B4DB3C6004289F6 /* LocaleKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,9 +477,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		C5A54BD72B4D87D100566B28 /* XCLocalSwiftPackageReference "RocketReserverAPI" */ = {
+		C55156DB2B4DE219004289F6 /* XCLocalSwiftPackageReference "CharactersAPI" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = RocketReserverAPI;
+			relativePath = CharactersAPI;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -496,30 +492,17 @@
 				minimumVersion = 1.7.1;
 			};
 		};
-		C5A54BD22B4D83DE00566B28 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.6;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C55156DC2B4DE219004289F6 /* CharactersAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CharactersAPI;
+		};
 		C5A54BBE2B4D744D00566B28 /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C5A54BBD2B4D744D00566B28 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
-		};
-		C5A54BD32B4D83DE00566B28 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C5A54BD22B4D83DE00566B28 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-		C5A54BD82B4D87D100566B28 /* RocketReserverAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RocketReserverAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,17 +7,17 @@
 
 import Foundation
 import Apollo
-import RocketReserverAPI
+import CharactersAPI
 
 // MARK: Static
 
 enum launchUrls {
-    static var base = URL(string: "https://apollo-fullstack-tutorial.herokuapp.com/graphql")
+    static var base = URL(string: "https://rickandmortyapi.com/graphql")
 }
 // MARK: - Protocol
 
 protocol NetworkService {
-    func fetchLaunches(completion: @escaping (Result<GraphQLResult<LaunchListQuery.Data>?, Error>) -> Void)
+    func fetchCharacters(completion: @escaping (Result<GraphQLResult<CharactersListQuery.Data>?, Error>) -> Void)
 }
 
 class Network: NetworkService {
@@ -34,8 +34,8 @@ class Network: NetworkService {
     
     // MARK: - Public Methods
     
-    public func fetchLaunches(completion: @escaping (Result<GraphQLResult<LaunchListQuery.Data>?, Error>) -> Void) {
-        apollo?.fetch(query: LaunchListQuery()) { result in
+    public func fetchCharacters(completion: @escaping (Result<GraphQLResult<CharactersListQuery.Data>?, Error>) -> Void) {
+        apollo?.fetch(query: CharactersListQuery()) { result in
             completion(result.map { Optional.some($0) })
         }
     }

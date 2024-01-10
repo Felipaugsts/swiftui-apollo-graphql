@@ -1,3 +1,6 @@
+""""""
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
+
 """
 A directive used by the Apollo iOS client to annotate operations or fragments that should be used exclusively for generating local cache mutations instead of as standard operations.
 """
@@ -14,78 +17,207 @@ directive @defer(
   label: String
 ) on FRAGMENT_SPREAD | INLINE_FRAGMENT
 
+""""""
 type Query {
-  launches(
-    """The number of results to show. Must be >= 1. Default = 20"""
-    pageSize: Int
+  """Get a specific character by ID"""
+  character(id: ID!): Character
 
-    """
-    If you add a cursor here, it will only return results _after_ this cursor
-    """
-    after: String
-  ): LaunchConnection!
-  launch(id: ID!): Launch
-  me: User
-  totalTripsBooked: Int
+  """Get the list of all characters"""
+  characters(page: Int, filter: FilterCharacter): Characters
+
+  """Get a list of characters selected by ids"""
+  charactersByIds(ids: [ID!]!): [Character]
+
+  """Get a specific locations by ID"""
+  location(id: ID!): Location
+
+  """Get the list of all locations"""
+  locations(page: Int, filter: FilterLocation): Locations
+
+  """Get a list of locations selected by ids"""
+  locationsByIds(ids: [ID!]!): [Location]
+
+  """Get a specific episode by ID"""
+  episode(id: ID!): Episode
+
+  """Get the list of all episodes"""
+  episodes(page: Int, filter: FilterEpisode): Episodes
+
+  """Get a list of episodes selected by ids"""
+  episodesByIds(ids: [ID!]!): [Episode]
 }
 
-"""
-Simple wrapper around our list of launches that contains a cursor to the
-last item in the list. Pass this cursor to the launches query to fetch results
-after these.
-"""
-type LaunchConnection {
-  cursor: String!
-  hasMore: Boolean!
-  launches: [Launch]!
-}
+""""""
+type Character {
+  """The id of the character."""
+  id: ID
 
-type Launch {
-  id: ID!
-  site: String
-  mission: Mission
-  rocket: Rocket
-  isBooked: Boolean!
-}
-
-type Mission {
+  """The name of the character."""
   name: String
-  missionPatch(size: PatchSize): String
-}
 
-enum PatchSize {
-  SMALL
-  LARGE
-}
+  """The status of the character ('Alive', 'Dead' or 'unknown')."""
+  status: String
 
-type Rocket {
-  id: ID!
-  name: String
+  """The species of the character."""
+  species: String
+
+  """The type or subspecies of the character."""
   type: String
+
+  """
+  The gender of the character ('Female', 'Male', 'Genderless' or 'unknown').
+  """
+  gender: String
+
+  """The character's origin location"""
+  origin: Location
+
+  """The character's last known location"""
+  location: Location
+
+  """
+  Link to the character's image.
+  All images are 300x300px and most are medium shots or portraits since they are intended to be used as avatars.
+  """
+  image: String
+
+  """Episodes in which this character appeared."""
+  episode: [Episode]!
+
+  """Time at which the character was created in the database."""
+  created: String
 }
 
-type User {
-  id: ID!
-  email: String!
-  profileImage: String
-  trips: [Launch]!
-  token: String
+""""""
+type Location {
+  """The id of the location."""
+  id: ID
+
+  """The name of the location."""
+  name: String
+
+  """The type of the location."""
+  type: String
+
+  """The dimension in which the location is located."""
+  dimension: String
+
+  """List of characters who have been last seen in the location."""
+  residents: [Character]!
+
+  """Time at which the location was created in the database."""
+  created: String
 }
 
-type Mutation {
-  bookTrips(launchIds: [ID]!): TripUpdateResponse!
-  cancelTrip(launchId: ID!): TripUpdateResponse!
-  login(email: String): User
+""""""
+type Episode {
+  """The id of the episode."""
+  id: ID
+
+  """The name of the episode."""
+  name: String
+
+  """The air date of the episode."""
+  air_date: String
+
+  """The code of the episode."""
+  episode: String
+
+  """List of characters who have been seen in the episode."""
+  characters: [Character]!
+
+  """Time at which the episode was created in the database."""
+  created: String
 }
 
-type TripUpdateResponse {
-  success: Boolean!
-  message: String
-  launches: [Launch]
+""""""
+input FilterCharacter {
+  """"""
+  name: String
+
+  """"""
+  status: String
+
+  """"""
+  species: String
+
+  """"""
+  type: String
+
+  """"""
+  gender: String
 }
 
-type Subscription {
-  tripsBooked: Int
+""""""
+type Characters {
+  """"""
+  info: Info
+
+  """"""
+  results: [Character]
+}
+
+""""""
+type Info {
+  """The length of the response."""
+  count: Int
+
+  """The amount of pages."""
+  pages: Int
+
+  """Number of the next page (if it exists)"""
+  next: Int
+
+  """Number of the previous page (if it exists)"""
+  prev: Int
+}
+
+""""""
+input FilterLocation {
+  """"""
+  name: String
+
+  """"""
+  type: String
+
+  """"""
+  dimension: String
+}
+
+""""""
+type Locations {
+  """"""
+  info: Info
+
+  """"""
+  results: [Location]
+}
+
+""""""
+input FilterEpisode {
+  """"""
+  name: String
+
+  """"""
+  episode: String
+}
+
+""""""
+type Episodes {
+  """"""
+  info: Info
+
+  """"""
+  results: [Episode]
+}
+
+""""""
+enum CacheControlScope {
+  """"""
+  PUBLIC
+
+  """"""
+  PRIVATE
 }
 
 """The `Upload` scalar type represents a file upload."""
