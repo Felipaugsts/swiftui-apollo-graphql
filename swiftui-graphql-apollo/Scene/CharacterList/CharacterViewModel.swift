@@ -10,14 +10,14 @@ import SwiftUI
 import CharactersAPI
 
 class CharacterViewModel: ObservableObject {
+    
     @Published var charactersList = [CharactersListModel]()
     @Published var loading: Bool = false
     @Published var searchText: String = ""
     
+    lazy var charactersListMocked: [CharactersListModel] = { loadMock() }()
     var filteredFruits: [CharactersListModel] {
-        charactersList.filter {
-            searchText.isEmpty || $0.name.localizedCaseInsensitiveContains(searchText)
-        }
+        charactersList.filter { searchText.isEmpty || $0.name.localizedCaseInsensitiveContains(searchText) }
     }
     
     private let service: NetworkService
@@ -32,11 +32,6 @@ class CharacterViewModel: ObservableObject {
     
     public func fetchCharacters() {
         loading = true
-        
-        if charactersList.isEmpty {
-            displayLoaderPlaceholders()
-        }
-        
         service.fetchCharacters { [weak self] result in
             guard let self = self else { return }
             
@@ -44,22 +39,29 @@ class CharacterViewModel: ObservableObject {
             case .success(let response):
                 if let response = response?.data?.characters?.results {
                     self.populateCharacterList(response)
+                    loading = false
                     return
                 }
                 
             case .failure(let failure):
                 print(failure)
+                loading = false
             }
         }
     }
     
     // MARK: - Private Methods
     
-    private func displayLoaderPlaceholders() {
-        let loaderPlaceholders: [CharactersListModel] = (0..<6).map { index in
-            CharactersListModel(id: String(index), name: "loading", status: "loading", species: "loading", image: "loading", location: "loading")
+    private func loadMock() -> [CharactersListModel] {
+        let loaderPlaceholders = (0..<2).map { index in
+            CharactersListModel(id: String(index),
+                                name: "loading",
+                                status: "loading",
+                                species: "loading",
+                                image: "loading",
+                                location: "loading")
         }
-        charactersList = loaderPlaceholders
+        return loaderPlaceholders.compactMap { $0 }
     }
     
     private func populateCharacterList(_ characters: [CharactersListQuery.Data.Characters.Result?]) {
@@ -68,11 +70,10 @@ class CharacterViewModel: ObservableObject {
                                        name: index?.name ?? "",
                                        status: index?.status,
                                        species: index?.species,
-                                       image: index?.image, 
+                                       image: index?.image,
                                        location: index?.location?.id)
         }
         
         charactersList = items
-        loading = false
     }
 }

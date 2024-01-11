@@ -21,7 +21,6 @@ struct CharacterView: View {
                     Toggle(LocaleKeys.skeletonComponent.localized,
                            isOn: $viewModel.loading)
                 }())
-                .padding()
         }
     }
     
@@ -31,18 +30,17 @@ struct CharacterView: View {
     private func content() -> some View {
         VStack() {
             Text(LocaleKeys.titleView.localized)
-                .shimmering($viewModel.loading)
             
             List {
-                ForEach(viewModel.filteredFruits, id: \.id) { character in
+                ForEach($viewModel.loading.wrappedValue ? viewModel.charactersListMocked : viewModel.filteredFruits, id: \.id) { character in
                     NavigationLink(destination: CharacterDetailView(item: character)) {
-                        ItemRow(item: character, loading: $viewModel.loading)
+                        ItemRow(item: character)
                             .shimmering($viewModel.loading)
                     }
                 }
             }
             .listStyle(.inset)
-            .searchable(text: $viewModel.searchText, prompt: LocaleKeys.textfieldPlaceholder.localized)
+            .searchable(text: $viewModel.searchText, prompt: $viewModel.loading.wrappedValue ? "" : LocaleKeys.textfieldPlaceholder.localized)
             .disabled(viewModel.loading)
         }
     }

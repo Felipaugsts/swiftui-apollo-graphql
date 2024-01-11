@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CharactersListModel: Codable, Hashable {
+struct CharactersListModel: Hashable {
     let id: String
     let name: String
     let status: String?

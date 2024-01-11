@@ -12,7 +12,6 @@ struct ItemRow: View {
     private let placeholderImg = Image(systemName: "gear")
     
     let item: CharactersListModel
-    @Binding var loading: Bool
     
     var body: some View {
         HStack {
@@ -20,7 +19,8 @@ struct ItemRow: View {
                 AsyncImage(url: url) { image in
                     image.resizable()
                 } placeholder: {
-                    EmptyView()
+                    placeholderImg
+                        .resizable()
                         .shimmering(.constant(true))
                 }
                 .frame(width: 100, height: 100)
@@ -55,5 +55,5 @@ struct ItemRow: View {
 }
 
 #Preview {
-    ItemRow(item: CharactersListModel(id: "1", name: "Rick", status: "dead", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/218.jpeg", location: ""), loading: .constant(true))
+    ItemRow(item: CharactersListModel(id: "1", name: "Rick", status: "dead", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/218.jpeg", location: ""))
 }
