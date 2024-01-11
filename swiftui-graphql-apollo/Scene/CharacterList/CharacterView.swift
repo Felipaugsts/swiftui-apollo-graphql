@@ -16,12 +16,12 @@ struct CharacterView: View {
                 .onAppear {
                     viewModel.fetchCharacters()
                 }
-                .navigationTitle(LocaleKeys.skeletonComponent.localized)
+                .navigationTitle(LocaleKeys.title.localized)
                 .navigationBarItems(trailing: {
                     Toggle(LocaleKeys.skeletonComponent.localized,
                            isOn: $viewModel.loading)
-                    .padding()
                 }())
+                .padding()
         }
     }
     
@@ -29,17 +29,8 @@ struct CharacterView: View {
     
     @ViewBuilder
     private func content() -> some View {
-        VStack {
-            charactersList()
-            Spacer()
-        }
-    }
-    
-    // MARK: - List
-    
-    private func charactersList() -> some View {
-        VStack {
-            Text(LocaleKeys.title.localized)
+        VStack() {
+            Text(LocaleKeys.titleView.localized)
                 .shimmering($viewModel.loading)
             
             List {
@@ -50,7 +41,7 @@ struct CharacterView: View {
                     }
                 }
             }
-            .listStyle(.grouped)
+            .listStyle(.inset)
             .searchable(text: $viewModel.searchText, prompt: LocaleKeys.textfieldPlaceholder.localized)
             .disabled(viewModel.loading)
         }

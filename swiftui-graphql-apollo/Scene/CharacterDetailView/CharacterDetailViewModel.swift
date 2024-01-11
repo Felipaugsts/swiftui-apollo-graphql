@@ -53,7 +53,7 @@ class CharacterDetailViewModel: ObservableObject {
             switch results {
             case .success(let resp):
                 if let response = resp?.data?.characters?.results {
-                    response.map { result in
+                    _ = response.map { result in
                         result?.episode.first?.map({ episode in
                             self.episodes.append(Episode(id: episode.id ?? "", name: episode.name ?? ""))
                         })
@@ -61,7 +61,7 @@ class CharacterDetailViewModel: ObservableObject {
                 }
                 self.loadingEpisodes = false
                 break
-            case .failure(let failure):
+            case .failure(_):
                 break
             }
         }

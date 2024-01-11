@@ -82,6 +82,7 @@
 		C55156CC2B4DB076004289F6 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				C5B8960C2B4D726E00018EA8 /* Preview Content */,
 				C55156CD2B4DB2BD004289F6 /* Resources */,
 				C5B896062B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift */,
 				C5B8960A2B4D726E00018EA8 /* Assets.xcassets */,
@@ -168,7 +169,6 @@
 				C55156C62B4DAB3B004289F6 /* Components */,
 				C55156CC2B4DB076004289F6 /* Infrastructure */,
 				C5A54BCB2B4D7A6500566B28 /* Scene */,
-				C5B8960C2B4D726E00018EA8 /* Preview Content */,
 				C55156CB2B4DB066004289F6 /* Extension */,
 			);
 			path = "swiftui-graphql-apollo";
@@ -418,7 +418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"swiftui-graphql-apollo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"swiftui-graphql-apollo/Infrastructure/Preview Content\"";
 				DEVELOPMENT_TEAM = 5QYSPM6K5Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -447,7 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"swiftui-graphql-apollo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"swiftui-graphql-apollo/Infrastructure/Preview Content\"";
 				DEVELOPMENT_TEAM = 5QYSPM6K5Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -11,6 +11,7 @@ enum LocaleKeys: String {
     case title = "titleView"
     case skeletonComponent = "skeletonComponent"
     case textfieldPlaceholder = "textfieldPlaceholder"
+    case titleView = "titleViews"
 }
 
 extension LocaleKeys {

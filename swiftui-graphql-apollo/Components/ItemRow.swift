@@ -28,7 +28,7 @@ struct ItemRow: View {
             }
             
             VStack(alignment: .leading) {
-                Text(item.name ?? "")
+                Text(item.name)
                     .font(.title2)
                     .tint(.black)
                 HStack {

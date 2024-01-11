@@ -9,7 +9,7 @@ import Foundation
 import Apollo
 import CharactersAPI
 
-// MARK: Static
+// MARK: URLs
 
 enum Urls {
     static var base = URL(string: "https://rickandmortyapi.com/graphql")

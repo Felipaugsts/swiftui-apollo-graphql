@@ -13,6 +13,7 @@ class CharacterViewModel: ObservableObject {
     @Published var charactersList = [CharactersListModel]()
     @Published var loading: Bool = false
     @Published var searchText: String = ""
+    
     var filteredFruits: [CharactersListModel] {
         charactersList.filter {
             searchText.isEmpty || $0.name.localizedCaseInsensitiveContains(searchText)
@@ -40,8 +41,8 @@ class CharacterViewModel: ObservableObject {
             guard let self = self else { return }
             
             switch result {
-            case .success(let success):
-                if let response = success?.data?.characters?.results {
+            case .success(let response):
+                if let response = response?.data?.characters?.results {
                     self.populateCharacterList(response)
                     return
                 }
@@ -74,5 +75,4 @@ class CharacterViewModel: ObservableObject {
         charactersList = items
         loading = false
     }
-    
 }
