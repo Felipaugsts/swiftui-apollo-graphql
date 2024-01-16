@@ -1,8 +1,8 @@
 //
-//  UIView+Extension.swift
+//  ShimmerModifier.swift
 //  swiftui-graphql-apollo
 //
-//  Created by Felipe Augusto Silva on 09/01/24.
+//  Created by Felipe Augusto Silva on 16/01/24.
 //
 
 import Foundation
@@ -24,16 +24,5 @@ public struct Shimmer: ViewModifier {
             .onAppear {
                 isInitialState = false
             }
-    }
-}
-
-public extension View {
-    @ViewBuilder func shimmering(_ isLoading: Binding<Bool>) -> some View {
-        if isLoading.wrappedValue {
-            self.modifier(Shimmer())
-                .redacted(reason: isLoading.wrappedValue ? .placeholder : [])
-        } else {
-            self
-        }
     }
 }

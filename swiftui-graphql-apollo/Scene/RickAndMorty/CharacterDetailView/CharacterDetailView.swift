@@ -33,7 +33,7 @@ struct CharacterDetailView: View {
                         .aspectRatio(contentMode: .fit)
                 } placeholder: {
                     EmptyView()
-                        .shimmering(.constant(true))
+                        .shimmer(when: .constant(true))
                 }
                 .frame(maxWidth: .infinity)
                 .ignoresSafeArea(edges: .top)
@@ -81,7 +81,7 @@ struct CharacterDetailView: View {
                 Text("No residents found")
             }
         }
-        .shimmering($viewModel.loadingPlanets)
+        .shimmer(when: $viewModel.loadingPlanets)
     }
     
     private func episodesDisclosureGroup() -> some View {
@@ -90,7 +90,7 @@ struct CharacterDetailView: View {
                 Text(episode.name)
             }
         }
-        .shimmering($viewModel.loadingEpisodes)
+        .shimmer(when: $viewModel.loadingEpisodes)
     }
 }
 

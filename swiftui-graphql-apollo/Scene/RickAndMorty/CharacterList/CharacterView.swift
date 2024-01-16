@@ -11,17 +11,15 @@ struct CharacterView: View {
     @ObservedObject var viewModel = CharacterViewModel()
     
     var body: some View {
-        NavigationView {
-            content()
-                .onAppear {
-                    viewModel.fetchCharacters()
-                }
-                .navigationTitle(LocaleKeys.title.localized)
-                .navigationBarItems(trailing: {
-                    Toggle(LocaleKeys.skeletonComponent.localized,
-                           isOn: $viewModel.loading)
-                }())
-        }
+        content()
+            .addNavigationView()
+            .onAppear {
+                viewModel.fetchCharacters()
+            }
+            .navigationBarItems(trailing: {
+                Toggle(LocaleKeys.skeletonComponent.localized,
+                       isOn: $viewModel.loading)
+            }())
     }
     
     // MARK: - Content
@@ -35,13 +33,19 @@ struct CharacterView: View {
                 ForEach($viewModel.loading.wrappedValue ? viewModel.charactersListMocked : viewModel.filteredFruits, id: \.id) { character in
                     NavigationLink(destination: CharacterDetailView(item: character)) {
                         ItemRow(item: character)
-                            .shimmering($viewModel.loading)
+                            .shimmer(when: $viewModel.loading)
                     }
                 }
             }
             .listStyle(.inset)
             .searchable(text: $viewModel.searchText, prompt: $viewModel.loading.wrappedValue ? "" : LocaleKeys.textfieldPlaceholder.localized)
             .disabled(viewModel.loading)
+            .refreshable {
+                viewModel.loading = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    viewModel.fetchCharacters()
+                }
+            }
         }
     }
 }

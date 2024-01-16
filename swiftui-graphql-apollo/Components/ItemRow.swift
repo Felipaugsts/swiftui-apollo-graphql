@@ -21,7 +21,7 @@ struct ItemRow: View {
                 } placeholder: {
                     placeholderImg
                         .resizable()
-                        .shimmering(.constant(true))
+                        .shimmer(when: .constant(true))
                 }
                 .frame(width: 100, height: 100)
                 .cornerRadius(8)

@@ -69,7 +69,7 @@ class CharacterDetailViewModel: ObservableObject {
     
     private func fetchResidents(_ data: PlanetsQuery.Data.Location) -> [CharactersListModel] {
         let response: [CharactersListModel] = data.residents.map { resident in
-            return  CharactersListModel(id: resident?.id ?? "", name: resident?.name ?? "", status: resident?.status ?? "", species: resident?.species, image: resident?.image ?? "", location: data.id ?? "")
+            return CharactersListModel(id: resident?.id ?? "", name: resident?.name ?? "", status: resident?.status ?? "", species: resident?.species, image: resident?.image ?? "", location: data.id ?? "")
         }
         
         return response

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C52C4E842B56ACFB002BF24D /* CardEditModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C4E832B56ACFB002BF24D /* CardEditModifier.swift */; };
+		C52C4E862B56AD48002BF24D /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C4E852B56AD48002BF24D /* ShimmerModifier.swift */; };
 		C55156C52B4DA495004289F6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C42B4DA495004289F6 /* UIView+Extension.swift */; };
 		C55156C82B4DAB48004289F6 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C72B4DAB48004289F6 /* ItemRow.swift */; };
 		C55156CA2B4DAB7C004289F6 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156C92B4DAB7C004289F6 /* CharacterDetailView.swift */; };
@@ -18,6 +20,10 @@
 		C55156DD2B4DE219004289F6 /* CharactersAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C55156DC2B4DE219004289F6 /* CharactersAPI */; };
 		C55156E02B4E0C0A004289F6 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156DF2B4E0C0A004289F6 /* CharacterDetailViewModel.swift */; };
 		C55156E22B4E0D52004289F6 /* CharacterDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55156E12B4E0D52004289F6 /* CharacterDetailModel.swift */; };
+		C5740B982B51A22400FE5DF6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5740B972B51A22400FE5DF6 /* HomeView.swift */; };
+		C5740BA12B51B08800FE5DF6 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5740BA02B51B08800FE5DF6 /* BaseButton.swift */; };
+		C5740BA32B51CEBB00FE5DF6 /* ModifierList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5740BA22B51CEBB00FE5DF6 /* ModifierList.swift */; };
+		C5740BA62B51EDC200FE5DF6 /* CardSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5740BA52B51EDC200FE5DF6 /* CardSelected.swift */; };
 		C5A54BBF2B4D744D00566B28 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = C5A54BBE2B4D744D00566B28 /* Apollo */; };
 		C5A54BCA2B4D771700566B28 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BC92B4D771700566B28 /* Network.swift */; };
 		C5A54BCF2B4D7A9B00566B28 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54BCE2B4D7A9B00566B28 /* CharacterView.swift */; };
@@ -29,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C52C4E832B56ACFB002BF24D /* CardEditModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEditModifier.swift; sourceTree = "<group>"; };
+		C52C4E852B56AD48002BF24D /* ShimmerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerModifier.swift; sourceTree = "<group>"; };
 		C55156C42B4DA495004289F6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C55156C72B4DAB48004289F6 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		C55156C92B4DAB7C004289F6 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
@@ -39,6 +47,10 @@
 		C55156D92B4DE207004289F6 /* CharactersAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CharactersAPI; sourceTree = "<group>"; };
 		C55156DF2B4E0C0A004289F6 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		C55156E12B4E0D52004289F6 /* CharacterDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailModel.swift; sourceTree = "<group>"; };
+		C5740B972B51A22400FE5DF6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C5740BA02B51B08800FE5DF6 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		C5740BA22B51CEBB00FE5DF6 /* ModifierList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierList.swift; sourceTree = "<group>"; };
+		C5740BA52B51EDC200FE5DF6 /* CardSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelected.swift; sourceTree = "<group>"; };
 		C5A54BC92B4D771700566B28 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C5A54BCE2B4D7A9B00566B28 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		C5A54BD02B4D7AAA00566B28 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
@@ -62,10 +74,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C52C4E812B56ACDC002BF24D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C52C4E822B56ACE3002BF24D /* Modifier */,
+				C55156CB2B4DB066004289F6 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C52C4E822B56ACE3002BF24D /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				C52C4E832B56ACFB002BF24D /* CardEditModifier.swift */,
+				C52C4E852B56AD48002BF24D /* ShimmerModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 		C55156C62B4DAB3B004289F6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				C55156C72B4DAB48004289F6 /* ItemRow.swift */,
+				C5740BA02B51B08800FE5DF6 /* BaseButton.swift */,
+				C5740BA52B51EDC200FE5DF6 /* CardSelected.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -109,6 +141,31 @@
 			path = CharacterDetailView;
 			sourceTree = "<group>";
 		};
+		C5740B952B51A1F400FE5DF6 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				C5740B972B51A22400FE5DF6 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		C5740B962B51A20700FE5DF6 /* RickAndMorty */ = {
+			isa = PBXGroup;
+			children = (
+				C55156DE2B4E0BC2004289F6 /* CharacterDetailView */,
+				C5A54BCD2B4D7A8600566B28 /* CharacterList */,
+			);
+			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		C5740B992B51A7D200FE5DF6 /* ModifierExample  */ = {
+			isa = PBXGroup;
+			children = (
+				C5740BA22B51CEBB00FE5DF6 /* ModifierList.swift */,
+			);
+			path = "ModifierExample ";
+			sourceTree = "<group>";
+		};
 		C5A54BC72B4D76B200566B28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +184,9 @@
 		C5A54BCB2B4D7A6500566B28 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				C55156DE2B4E0BC2004289F6 /* CharacterDetailView */,
-				C5A54BCD2B4D7A8600566B28 /* CharacterList */,
+				C5740B992B51A7D200FE5DF6 /* ModifierExample  */,
+				C5740B952B51A1F400FE5DF6 /* HomeView */,
+				C5740B962B51A20700FE5DF6 /* RickAndMorty */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -169,7 +227,7 @@
 				C55156C62B4DAB3B004289F6 /* Components */,
 				C55156CC2B4DB076004289F6 /* Infrastructure */,
 				C5A54BCB2B4D7A6500566B28 /* Scene */,
-				C55156CB2B4DB066004289F6 /* Extension */,
+				C52C4E812B56ACDC002BF24D /* Utils */,
 			);
 			path = "swiftui-graphql-apollo";
 			sourceTree = "<group>";
@@ -264,17 +322,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C55156C52B4DA495004289F6 /* UIView+Extension.swift in Sources */,
+				C5740BA12B51B08800FE5DF6 /* BaseButton.swift in Sources */,
 				C55156D42B4DB357004289F6 /* String+Extension.swift in Sources */,
+				C5740B982B51A22400FE5DF6 /* HomeView.swift in Sources */,
 				C5A54BCF2B4D7A9B00566B28 /* CharacterView.swift in Sources */,
 				C5B896072B4D726C00018EA8 /* swiftui_graphql_apolloApp.swift in Sources */,
+				C52C4E862B56AD48002BF24D /* ShimmerModifier.swift in Sources */,
 				C5A54BD12B4D7AAA00566B28 /* CharacterViewModel.swift in Sources */,
 				C5A54BCA2B4D771700566B28 /* Network.swift in Sources */,
+				C5740BA32B51CEBB00FE5DF6 /* ModifierList.swift in Sources */,
 				C55156E02B4E0C0A004289F6 /* CharacterDetailViewModel.swift in Sources */,
+				C52C4E842B56ACFB002BF24D /* CardEditModifier.swift in Sources */,
 				C55156C82B4DAB48004289F6 /* ItemRow.swift in Sources */,
 				C5A54BDB2B4D8BA400566B28 /* CharactersModel.swift in Sources */,
 				C55156CA2B4DAB7C004289F6 /* CharacterDetailView.swift in Sources */,
 				C55156E22B4E0D52004289F6 /* CharacterDetailModel.swift in Sources */,
 				C55156D62B4DB3C6004289F6 /* LocaleKeys.swift in Sources */,
+				C5740BA62B51EDC200FE5DF6 /* CardSelected.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
